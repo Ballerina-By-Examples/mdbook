@@ -1,0 +1,51 @@
+# Isolated Variables
+
+ When a variable is declared as `isolated`, compiler guarantees that it is an `isolated` root and
+ accessed only within a `lock` statement. An `isolated` variable declaration must be at module-level,
+ not public, and initialized with an `isolated` expression. A `lock` statement that accesses an
+ `isolated` variable must maintain `isolated` root invariant:
+ <ul>
+ <li>access only one `isolated` variable</li>
+ <li>access only one `isolated` variable</li>
+ <li>call only `isolated` functions</li>
+ <li>transfers of values in and out must use `isolated` expressions</li>
+ </ul>
+ <br></br>
+ <p>The `isolated` functions are allowed to access `isolated` module-level variables,
+ provided they follow the above rules.</p>
+
+```go
+import ballerina/io;
+
+// Initializes an `isolated` variable using
+// an `isolated` expression.
+isolated int[] stack = [];
+
+isolated function push(int n) {
+    // Accesses `isolated` variable within a
+    // `lock` statement.
+    lock {
+        stack.push(n);
+    }
+
+}
+
+isolated function pop() returns int {
+    lock {
+        return stack.pop();
+    }
+}
+
+public function main() {
+    push(10);
+    push(20);
+    io:println(pop());
+}
+```
+
+#### Output
+
+```go
+bal run isolated_variables.bal
+20
+```

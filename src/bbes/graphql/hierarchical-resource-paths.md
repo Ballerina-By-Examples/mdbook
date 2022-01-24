@@ -1,1 +1,0 @@
-# Hierarchical Resource Paths

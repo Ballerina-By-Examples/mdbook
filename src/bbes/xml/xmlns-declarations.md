@@ -1,1 +1,0 @@
-# XMLNS Declarations

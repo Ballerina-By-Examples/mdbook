@@ -1,1 +1,0 @@
-# Gauge-Based Metrics
