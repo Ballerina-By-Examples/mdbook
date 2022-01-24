@@ -1,9 +1,0 @@
-[book]
-authors = ["YasithD"]
-language = "en"
-multilingual = false
-src = "src"
-title = "Ballerina By Examples"
-
-[output.html.playground]
-editable = true
