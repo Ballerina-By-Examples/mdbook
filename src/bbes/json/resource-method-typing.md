@@ -1,0 +1,1 @@
+# Resource Method Typing

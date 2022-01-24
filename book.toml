@@ -3,7 +3,7 @@ authors = ["YasithD"]
 language = "en"
 multilingual = false
 src = "src"
-title = "first-book"
+title = "Ballerina By Examples"
 
 [output.html.playground]
 editable = true
