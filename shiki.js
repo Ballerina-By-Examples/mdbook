@@ -2,7 +2,6 @@ const code_blocks = document.getElementsByClassName("language-go");
 
 for (let i = 0; i < code_blocks.length; i++) {
   const code = code_blocks[i].innerText;
-  console.log(code);
 
   shiki
     .getHighlighter({
