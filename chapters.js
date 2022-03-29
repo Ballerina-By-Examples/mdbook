@@ -1,5 +1,5 @@
 // chapter folding
-const chapters = document.querySelectorAll("chapter-item");
+const chapters = document.querySelectorAll(".chapter-item > div");
 
 chapters.forEach((chapter) => {
   chapter.addEventListener("click", () => {
