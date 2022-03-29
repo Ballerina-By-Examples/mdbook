@@ -21,3 +21,17 @@ for (let i = 0; i < code_blocks.length; i++) {
       document.getElementsByClassName("language-go")[i].innerHTML = output;
     });
 }
+
+// chapter folding
+const chapters = document.querySelectorAll("chapter-item");
+
+chapters.forEach((chapter) => {
+  chapter.addEventListener("click", () => {
+    let className = chapter.parentElement.className;
+    if (className === "chapter-item") {
+      chapter.parentElement.className = "chapter-item expanded";
+    } else {
+      chapter.parentElement.className = "chapter-item";
+    }
+  });
+});

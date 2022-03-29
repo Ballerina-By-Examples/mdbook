@@ -7,3 +7,7 @@ pre > code > span > span {
     "DejaVu Sans Mono", monospace, monospace !important;
   font-size: 14px;
 }
+
+.chapter-item > div {
+  cursor: pointer;
+}
